@@ -1,7 +1,8 @@
 # 買ったもの
 biru = 200*2
 fod = 100
-yaki = (100*2)*0.8
+# セールで2割引き
+yaki = (100-(100*0.2))*2
 
 # ポイント引きの値段
 waribiki = 150
@@ -11,4 +12,4 @@ goukei = biru + fod + yaki
 # 買った合計金額からポイント分を引いた数
 total = goukei - waribiki
 
-print(total)
+print("合計金額" ,total, "円")
