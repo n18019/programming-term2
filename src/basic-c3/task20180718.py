@@ -44,7 +44,9 @@ while True:
         menu_f.append(option[user_option])
         break
     elif user_option == 'q' or user_option == '':
-        break
+        print('注文内容は{}です'.format(menu_v))
+        print('合計金額は{}円です。右奥のカウンターでお待ちください'.format(menu_f))
+        sys.exit()
     else:
         print('存在しないメニューです')
         continue
