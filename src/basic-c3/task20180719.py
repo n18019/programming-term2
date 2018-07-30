@@ -21,6 +21,7 @@ def mul(a, b):
     aとbをかけた値
     '''
     return a * b
+help(mul)
 
 def sub(a, b):
     '''
@@ -36,6 +37,7 @@ def sub(a, b):
     aとbを引いた値
     '''
     return a - b
+help(sub)
 
 def add(a, b):
     '''
@@ -51,6 +53,7 @@ def add(a, b):
     aとbを足した値
     '''
     return a + b
+help(add)
 
 def div(a, b):
     '''
@@ -66,6 +69,7 @@ def div(a, b):
     aとbを割った値
     '''
     return a / b
+help(div)
 
 print('四則計算プログラムです')
 while True:

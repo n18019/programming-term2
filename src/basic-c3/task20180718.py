@@ -21,13 +21,13 @@ option = {
 }
 # 値を入れる空のリスト
 menu_v = []
-menu_f = []
+menu_f = 0
 
 while True:
     user_main = input('メインメニューを入力してください>>>')
     if user_main in menu.keys():
         menu_v.append(user_main)
-        menu_f.append(menu[user_main])
+        menu_f += menu[user_main]
         break
     elif user_main == 'q' or user_main == '':
         print('注文をキャンセルします')
@@ -41,7 +41,7 @@ while True:
     user_option = input('オプションメニューを選んでください>>>')
     if user_option in option.keys():
         menu_v.append(user_option)
-        menu_f.append(option[user_option])
+        menu_f += option[user_option]
         break
     elif user_option == 'q' or user_option == '':
         print('注文内容は{}です'.format(menu_v))
@@ -55,14 +55,12 @@ while True:
     user_option2 = input('他にオプションメニューの注文はございますか？>>>')
     if user_option2 in option.keys():
         menu_v.append(user_option2)
-        menu_f.append(option[user_option2])
+        menu_f += option[user_option2]
     elif user_option2 == 'q' or user_option2 == '':
         break
     else:
         print('存在しないメニューです')
 
 
-# sum関数でappendで入れてきた値を足す
-money = sum(menu_f)
 print('注文内容は{}です'.format(menu_v))
-print('合計金額は{}円です。右奥のカウンターでお待ちください'.format(money))
+print('合計金額は{}円です。右奥のカウンターでお待ちください'.format(menu_f))
