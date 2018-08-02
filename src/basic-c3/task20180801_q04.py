@@ -13,9 +13,8 @@ def count_s(n):
     nにreturn
     '''
     return n // 10 == 3 or n % 3 == 0
-help(count_s)
 # max値をnumsに
-nums = range(1, 40)
+nums = range(1, 41)
 count_nams = filter(count_s, nums)
 
 print(list(count_nams))
