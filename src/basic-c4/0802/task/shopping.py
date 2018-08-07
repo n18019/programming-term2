@@ -35,7 +35,7 @@ def exec():
         s = "{}を{}個買いました。商品計{}円です。".format(name, kazu, ryoukin)
         res_list.append(s)
     total = sum(money_list)
-    tax_v = round(total * ctx(total))
+    tax_v = round(ctx(total))
     kk = "税抜き総額{}円、消費税込み{}円です。".format(total, tax_v)
     res_list.append(kk)
     pp = '残金は{}円です。'.format(money-tax_v)
